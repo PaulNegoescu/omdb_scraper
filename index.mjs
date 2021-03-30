@@ -28,7 +28,13 @@ const argv = yargs(process.argv.slice(2))
     imdb: `${mainUrl}i=`,
   };
 
-  const { file, type, out } = argv;
+  let { file, type, out } = argv;
+  if (!file) {
+    throw new Error('Please specify an input file!');
+  }
+
+  type = type || 'title';
+  out = out || 'out.json';
 
   const data = JSON.parse(await fs.readFile(file, { encoding: 'utf8' }));
 
