@@ -81,7 +81,7 @@ function normalizeKeysAndValues(movie) {
       if (value === 'N/A') {
         value = null;
       } else if (Array.isArray(value)) {
-        value = value.map((obj) => normalizeKeysAndValues(obj));
+        value = value.map(normalizeKeysAndValues);
       } else if (value == Number(value)) {
         value = Number(value);
       }
