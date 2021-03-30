@@ -1,0 +1,16 @@
+{
+  "name": "omdb-scrape",
+  "version": "1.0.0",
+  "description": "Scrapes a list of movies from omdb, the list is provided in a json input file as an array of movie titles or IMDB ids.",
+  "scripts": {
+    "start": "env-cmd node index.mjs"
+  },
+  "keywords": [],
+  "author": "Paul Negoescu",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "env-cmd": "^10.1.0",
+    "yargs": "^16.2.0"
+  }
+}
